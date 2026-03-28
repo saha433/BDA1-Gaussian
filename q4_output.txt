@@ -1,0 +1,22 @@
+BDA Assignment-1 Q4: Median Estimation via Histogram (Gaussian)
+Total elements : 10^9 = 1000000000
+Range          : -2^30 to 2^30
+Distribution   : Gaussian
+Threads        : 8
+
+Median bucket    : 512
+Bucket range     : [0, 2097152]
+Median estimate  : 1048576
+
+Local median estimates:
+  Thread 0 -> 1048576
+  Thread 1 -> 1048576
+  Thread 2 -> 1048576
+  Thread 3 -> 1048576
+  Thread 4 -> 1048576
+  Thread 5 -> 1048576
+  Thread 6 -> 1048576
+  Thread 7 -> 1048576
+
+Median of Medians : 1048576
+Histogram Median  : 1048576

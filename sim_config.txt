@@ -1,0 +1,7 @@
+total_seconds=3600
+total_minutes=60
+ten_min_blocks=6
+values_per_sec=100000
+total_values=360000000
+gauss_mean=0.5000
+gauss_sigma=0.1500

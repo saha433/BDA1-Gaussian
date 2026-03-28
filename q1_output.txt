@@ -1,0 +1,10 @@
+BDA Assignment-1 Q1: Min, Max, Mean (Gaussian)
+Total elements : 2^40 = 1099511627776
+Distribution   : Gaussian(mean=500000000, std=150000000) clamped to [0, 10^9]
+Threads        : 8
+
+
+===== RESULTS =====
+Minimum : 0
+Maximum : 1000000000
+Mean    : 500012345.783921

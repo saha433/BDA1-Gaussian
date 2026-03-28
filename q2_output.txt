@@ -1,0 +1,12 @@
+BDA Assignment-1 Q2: Dot & Cross Products (Gaussian)
+Vector length  : 10^10 = 10000000000
+Distribution   : Gaussian(mean=0.0, std=0.8) rounded to {-1,0,1}
+Threads        : 8
+                       
+===== RESULTS =====
+Dot Product (sum over 10^10 elements) : -35034
+
+3-D Cross Product (using first 3 elements of each vector):
+  A = (1, -1, 0)
+  B = (0, 1, -1)
+  A x B = (1, 1, 1)
