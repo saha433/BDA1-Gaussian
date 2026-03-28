@@ -97,7 +97,6 @@ int main(void)
     printf("Distribution   : Gaussian(mean=%.1f, std=%.1f) rounded to {-1,0,1}\n",
            GAUSS_MEAN, GAUSS_STD);
     printf("Threads        : %d\n\n", NUM_THREADS);
-    printf("Processing...\n");
 
     clock_t t0 = clock();
 
@@ -133,7 +132,6 @@ int main(void)
     printf("  A = (%d, %d, %d)\n", a0, a1, a2);
     printf("  B = (%d, %d, %d)\n", b0, b1, b2);
     printf("  A x B = (%d, %d, %d)\n", cx, cy, cz);
-    printf("\nTime : %.2f seconds\n", elapsed);
 
     return 0;
 }
