@@ -120,7 +120,6 @@ int main(void)
     printf("Minimum : %llu\n", (unsigned long long)gmin);
     printf("Maximum : %llu\n", (unsigned long long)gmax);
     printf("Mean    : %.6f\n", mean);
-    printf("Time    : %.2f seconds\n", elapsed);
 
     return 0;
 }
