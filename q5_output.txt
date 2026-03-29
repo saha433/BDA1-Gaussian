@@ -1,0 +1,138 @@
+║   Gaussian Stream Statistics Simulator  (mean=0.5, σ=0.15) ║
+╚════════════════════════════════════════════════════════════╝
+
+  Duration       : 3600 s  (1 hour)
+  Values/second  : 100000
+  Total values   : 360000000
+  Minute windows : 60
+  10-min blocks  : 6
+  Worker threads : 4
+  Fixed seed     : 42
+
+  Running simulation (Box-Muller Gaussian)... done.
+
+╔══════════════════════════════════════════════════════╗
+║           PART (a): OVERALL STATISTICS               ║
+╚══════════════════════════════════════════════════════╝
+Overall:               Mean=0.50000  StdDev=0.14988  Min=0.00025  Max=0.99975  Median=0.50025  P25=0.39875  P75=0.60125  Mode=0.50175
+
+  Theoretical values for Gaussian (mu=0.5, sigma=0.15) clipped to [0,1]:
+    Mean         ≈ 0.50000   got 0.50000
+    Std Dev      ≈ 0.14xxx   got 0.14988  (clipping reduces sigma slightly)
+    Median       ≈ 0.50000   got 0.50025
+    P25          ≈ 0.39878   got 0.39875  (mu - 0.6745*sigma)
+    P75          ≈ 0.60122   got 0.60125  (mu + 0.6745*sigma)
+    Mode         ≈ 0.50000   got 0.50175  (peak of bell curve)
+
+  Significance of measures:
+    Mean   : Central tendency; equals median for a symmetric Gaussian.
+    Median : Robust to outliers; confirms near-perfect symmetry here.
+    Mode   : Peak of the bell curve; coincides with mean/median.
+    StdDev : Spread of the distribution; ~68% of data in [mu-sigma, mu+sigma].
+    P25/P75: IQR region; for Gaussian, IQR ≈ 1.3490 * sigma.
+    Min/Max: Empirical bounds; clipping at 0 and 1 creates small
+             pile-up at boundaries (visible in histogram tails).
+╔═══════════════════════════════════════════════════════╗
+║         PART (b): PER-MINUTE ANALYSIS                  ║
+╚════════════════════════════════════════════════════════╝
+Interval               Mean      StdDev    Min       Max       Median    P25       P75       Mode     
+Minute 01:             Mean=0.49991  StdDev=0.14982  Min=0.00025  Max=0.99975  Median=0.49975  P25=0.39875  P75=0.60125  Mode=0.49425
+Minute 02:             Mean=0.50002  StdDev=0.14981  Min=0.00025  Max=0.99975  Median=0.50025  P25=0.39875  P75=0.60125  Mode=0.49575
+Minute 03:             Mean=0.49995  StdDev=0.14979  Min=0.00025  Max=0.99975  Median=0.50025  P25=0.39875  P75=0.60125  Mode=0.50175
+Minute 04:             Mean=0.49989  StdDev=0.14990  Min=0.00025  Max=0.99975  Median=0.49975  P25=0.39875  P75=0.60125  Mode=0.48775
+Minute 05:             Mean=0.50000  StdDev=0.14990  Min=0.00025  Max=0.99975  Median=0.49975  P25=0.39875  P75=0.60125  Mode=0.50025
+Minute 06:             Mean=0.50000  StdDev=0.14991  Min=0.00025  Max=0.99975  Median=0.50025  P25=0.39875  P75=0.60125  Mode=0.50075
+Minute 07:             Mean=0.50009  StdDev=0.14995  Min=0.00025  Max=0.99975  Median=0.50025  P25=0.39875  P75=0.60125  Mode=0.50125
+Minute 08:             Mean=0.50010  StdDev=0.14983  Min=0.00025  Max=0.99975  Median=0.50025  P25=0.39875  P75=0.60125  Mode=0.49775
+Minute 09:             Mean=0.50007  StdDev=0.14992  Min=0.00025  Max=0.99975  Median=0.50025  P25=0.39875  P75=0.60125  Mode=0.49875
+Minute 10:             Mean=0.50004  StdDev=0.14989  Min=0.00025  Max=0.99975  Median=0.50025  P25=0.39875  P75=0.60125  Mode=0.50175
+Minute 11:             Mean=0.50003  StdDev=0.14984  Min=0.00025  Max=0.99975  Median=0.50025  P25=0.39875  P75=0.60125  Mode=0.49775
+Minute 12:             Mean=0.49983  StdDev=0.14993  Min=0.00025  Max=0.99975  Median=0.49975  P25=0.39875  P75=0.60125  Mode=0.50925
+Minute 13:             Mean=0.50004  StdDev=0.14987  Min=0.00025  Max=0.99975  Median=0.50025  P25=0.39875  P75=0.60125  Mode=0.51475
+Minute 14:             Mean=0.50009  StdDev=0.14983  Min=0.00025  Max=0.99975  Median=0.50025  P25=0.39875  P75=0.60125  Mode=0.50925
+Minute 15:             Mean=0.50009  StdDev=0.14986  Min=0.00025  Max=0.99975  Median=0.50025  P25=0.39875  P75=0.60125  Mode=0.50725
+Minute 16:             Mean=0.49997  StdDev=0.14993  Min=0.00025  Max=0.99975  Median=0.49975  P25=0.39875  P75=0.60125  Mode=0.48525
+Minute 17:             Mean=0.50001  StdDev=0.14984  Min=0.00025  Max=0.99975  Median=0.50025  P25=0.39875  P75=0.60125  Mode=0.50725
+Minute 18:             Mean=0.49997  StdDev=0.14991  Min=0.00025  Max=0.99975  Median=0.50025  P25=0.39875  P75=0.60125  Mode=0.50875
+Minute 19:             Mean=0.49998  StdDev=0.14990  Min=0.00025  Max=0.99975  Median=0.49975  P25=0.39875  P75=0.60125  Mode=0.49475
+Minute 20:             Mean=0.49999  StdDev=0.14979  Min=0.00025  Max=0.99975  Median=0.49975  P25=0.39875  P75=0.60125  Mode=0.50925
+Minute 21:             Mean=0.50011  StdDev=0.14987  Min=0.00025  Max=0.99975  Median=0.50025  P25=0.39875  P75=0.60125  Mode=0.48725
+Minute 22:             Mean=0.50005  StdDev=0.14987  Min=0.00025  Max=0.99975  Median=0.50025  P25=0.39875  P75=0.60125  Mode=0.50425
+Minute 23:             Mean=0.50005  StdDev=0.14990  Min=0.00025  Max=0.99975  Median=0.50025  P25=0.39875  P75=0.60125  Mode=0.51275
+Minute 24:             Mean=0.49998  StdDev=0.14991  Min=0.00025  Max=0.99975  Median=0.49975  P25=0.39875  P75=0.60125  Mode=0.50725
+Minute 25:             Mean=0.50007  StdDev=0.14990  Min=0.00025  Max=0.99975  Median=0.50025  P25=0.39875  P75=0.60125  Mode=0.48925
+Minute 26:             Mean=0.50003  StdDev=0.14990  Min=0.00025  Max=0.99975  Median=0.50025  P25=0.39875  P75=0.60125  Mode=0.48925
+Minute 27:             Mean=0.49989  StdDev=0.14989  Min=0.00025  Max=0.99975  Median=0.49975  P25=0.39875  P75=0.60125  Mode=0.50775
+Minute 28:             Mean=0.49981  StdDev=0.14989  Min=0.00025  Max=0.99975  Median=0.49975  P25=0.39875  P75=0.60125  Mode=0.50275
+  *** ANOMALY detected in Minute 28: mean=0.49981 deviates by >3 SE from 0.5 ***
+Minute 29:             Mean=0.50001  StdDev=0.14989  Min=0.00025  Max=0.99975  Median=0.49975  P25=0.39875  P75=0.60125  Mode=0.49175
+Minute 30:             Mean=0.50006  StdDev=0.14994  Min=0.00025  Max=0.99975  Median=0.50025  P25=0.39875  P75=0.60125  Mode=0.50225
+Minute 31:             Mean=0.49996  StdDev=0.14984  Min=0.00025  Max=0.99975  Median=0.49975  P25=0.39875  P75=0.60125  Mode=0.48975
+Minute 32:             Mean=0.49996  StdDev=0.14992  Min=0.00025  Max=0.99975  Median=0.49975  P25=0.39875  P75=0.60125  Mode=0.49525
+Minute 33:             Mean=0.49997  StdDev=0.14994  Min=0.00025  Max=0.99975  Median=0.49975  P25=0.39875  P75=0.60125  Mode=0.51175
+Minute 34:             Mean=0.50007  StdDev=0.14981  Min=0.00025  Max=0.99975  Median=0.50025  P25=0.39875  P75=0.60125  Mode=0.51225
+Minute 35:             Mean=0.50001  StdDev=0.14987  Min=0.00025  Max=0.99975  Median=0.50025  P25=0.39875  P75=0.60125  Mode=0.49225
+Minute 36:             Mean=0.50001  StdDev=0.14988  Min=0.00025  Max=0.99975  Median=0.50025  P25=0.39875  P75=0.60125  Mode=0.49725
+Minute 37:             Mean=0.50004  StdDev=0.14983  Min=0.00025  Max=0.99975  Median=0.50025  P25=0.39875  P75=0.60125  Mode=0.51075
+Minute 38:             Mean=0.50008  StdDev=0.14984  Min=0.00025  Max=0.99975  Median=0.50025  P25=0.39875  P75=0.60125  Mode=0.49825
+Minute 39:             Mean=0.49999  StdDev=0.14991  Min=0.00025  Max=0.99975  Median=0.49975  P25=0.39875  P75=0.60125  Mode=0.48925
+Minute 40:             Mean=0.50009  StdDev=0.14988  Min=0.00025  Max=0.99975  Median=0.50025  P25=0.39875  P75=0.60125  Mode=0.49575
+Minute 41:             Mean=0.49995  StdDev=0.14985  Min=0.00025  Max=0.99975  Median=0.49975  P25=0.39875  P75=0.60125  Mode=0.50175
+Minute 42:             Mean=0.49998  StdDev=0.14991  Min=0.00025  Max=0.99975  Median=0.50025  P25=0.39875  P75=0.60125  Mode=0.48525
+Minute 43:             Mean=0.50004  StdDev=0.14992  Min=0.00025  Max=0.99975  Median=0.50025  P25=0.39875  P75=0.60125  Mode=0.50425
+Minute 44:             Mean=0.50001  StdDev=0.14987  Min=0.00025  Max=0.99975  Median=0.50025  P25=0.39875  P75=0.60125  Mode=0.50575
+Minute 45:             Mean=0.49998  StdDev=0.14985  Min=0.00025  Max=0.99975  Median=0.50025  P25=0.39875  P75=0.60125  Mode=0.49675
+Minute 46:             Mean=0.50010  StdDev=0.14987  Min=0.00025  Max=0.99975  Median=0.50025  P25=0.39875  P75=0.60125  Mode=0.49725
+Minute 47:             Mean=0.49988  StdDev=0.14994  Min=0.00025  Max=0.99975  Median=0.49975  P25=0.39875  P75=0.60075  Mode=0.50175
+Minute 48:             Mean=0.49998  StdDev=0.14989  Min=0.00025  Max=0.99975  Median=0.49975  P25=0.39875  P75=0.60125  Mode=0.51125
+Minute 49:             Mean=0.49987  StdDev=0.14984  Min=0.00025  Max=0.99975  Median=0.49975  P25=0.39875  P75=0.60075  Mode=0.51425
+Minute 50:             Mean=0.49996  StdDev=0.14991  Min=0.00025  Max=0.99975  Median=0.49975  P25=0.39875  P75=0.60125  Mode=0.49575
+Minute 51:             Mean=0.49993  StdDev=0.14985  Min=0.00025  Max=0.99975  Median=0.49975  P25=0.39875  P75=0.60125  Mode=0.48875
+Minute 52:             Mean=0.50004  StdDev=0.14985  Min=0.00025  Max=0.99975  Median=0.50025  P25=0.39875  P75=0.60125  Mode=0.51075
+Minute 53:             Mean=0.50006  StdDev=0.14985  Min=0.00025  Max=0.99975  Median=0.50025  P25=0.39875  P75=0.60125  Mode=0.48725
+Minute 54:             Mean=0.50001  StdDev=0.14993  Min=0.00025  Max=0.99975  Median=0.49975  P25=0.39875  P75=0.60125  Mode=0.51325
+Minute 55:             Mean=0.50003  StdDev=0.14995  Min=0.00025  Max=0.99975  Median=0.49975  P25=0.39875  P75=0.60125  Mode=0.47775
+Minute 56:             Mean=0.50010  StdDev=0.14982  Min=0.00025  Max=0.99975  Median=0.50025  P25=0.39925  P75=0.60125  Mode=0.51725
+Minute 57:             Mean=0.49999  StdDev=0.14990  Min=0.00025  Max=0.99975  Median=0.50025  P25=0.39875  P75=0.60125  Mode=0.51225
+Minute 58:             Mean=0.50002  StdDev=0.14989  Min=0.00025  Max=0.99975  Median=0.49975  P25=0.39875  P75=0.60125  Mode=0.48725
+Minute 59:             Mean=0.49992  StdDev=0.14989  Min=0.00025  Max=0.99975  Median=0.49975  P25=0.39875  P75=0.60125  Mode=0.49675
+Minute 60:             Mean=0.50008  StdDev=0.14991  Min=0.00025  Max=0.99975  Median=0.50025  P25=0.39875  P75=0.60125  Mode=0.50875
+
+  Trend interpretation:
+    Because values are i.i.d. Gaussian, per-minute means
+    should hover at ~0.5 with standard error ≈ 0.0000612.
+    Any minute deviating by >3 SE is flagged as anomalous.
+    Std-dev per minute ≈ 0.15000 (mirrors population sigma).
+╔════════════════════════════════════════════════════╗
+║         10-MINUTE BLOCK ANALYSIS                     ║
+╚══════════════════════════════════════════════════════╝
+Interval               Mean      StdDev    Min       Max       Median    P25       P75       Mode     
+Min 01-10:             Mean=0.50001  StdDev=0.14987  Min=0.00025  Max=0.99975  Median=0.50025  P25=0.39875  P75=0.60125  Mode=0.50175
+Min 11-20:             Mean=0.50000  StdDev=0.14987  Min=0.00025  Max=0.99975  Median=0.50025  P25=0.39875  P75=0.60125  Mode=0.50875
+Min 21-30:             Mean=0.50001  StdDev=0.14990  Min=0.00025  Max=0.99975  Median=0.50025  P25=0.39875  P75=0.60125  Mode=0.49475
+Min 31-40:             Mean=0.50002  StdDev=0.14987  Min=0.00025  Max=0.99975  Median=0.50025  P25=0.39875  P75=0.60125  Mode=0.49525
+Min 41-50:             Mean=0.49997  StdDev=0.14989  Min=0.00025  Max=0.99975  Median=0.49975  P25=0.39875  P75=0.60125  Mode=0.50175
+Min 51-60:             Mean=0.50002  StdDev=0.14989  Min=0.00025  Max=0.99975  Median=0.50025  P25=0.39875  P75=0.60125  Mode=0.50225
+╔══════════════════════════════════════════════════════╗
+║       PART (c): IQR & OUTLIER ANALYSIS               ║
+╚══════════════════════════════════════════════════════╝
+  Q1 (P25)     : 0.39875
+  Q3 (P75)     : 0.60125
+  IQR          : 0.20250   (expected ≈ 0.20235 = 1.3490 × sigma)
+  Lower fence  : 0.09500   (Q1 - 1.5 × IQR)
+  Upper fence  : 0.90500   (Q3 + 1.5 × IQR)
+  Outlier range: values < 0.09500  OR  > 0.90500
+  Outlier count: 2495483  (0.6932% of 360000000 values)
+
+  For a pure Gaussian, Tukey fences exclude ≈ 0.70% of the tail.
+  Clipping at [0,1] transfers some tail mass onto the boundary bins,
+  slightly inflating outlier counts near 0 and 1.
+
+  Impact of outliers on central tendency:
+    Mean   : Mildly pulled toward 0 or 1 by clipped values.
+    Median : Virtually unaffected — robust to tails.
+    Mode   : Unaffected (peak is far from tails).
+    StdDev : Slightly reduced because clipping removes extreme tails.
+
+  CSV files saved: global_stats.csv  minute_stats.csv  ten_min_stats.csv
+  Run plot_boxplots.py to generate box plots.
